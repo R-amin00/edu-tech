@@ -13,6 +13,11 @@
         extend: {
           colors: {
             clifford: '#da373d',
+            textash:'#777777',
+            register:'#289BDE',
+            imgwidth:'600px',
+            imgheight:'800px',
+            background:'#F4FAFD',
           }
         }
       }
@@ -21,11 +26,11 @@
 </head>
 <body>
     <!-- Header start -->
-    <header>
+    <header class="container mx-auto pt-12 mb-28">
         <!-- Nav start -->
-        <nav>
-            <h3 class="text-xl">ProEdu</h3>
-            <ul class="flex">
+        <nav class="flex items-center justify-between pb-12">
+            <h3 class="text-2xl font-bold">ProEdu</h3>
+            <ul class="flex list-none gap-10 text-sm text-textash">
                 <li><a href="">Home</a></li>
                 <li><a href="">Courses</a></li>
                 <li><a href="">Deals</a></li>
@@ -33,10 +38,204 @@
                 <li><a href="">About</a></li>
                 <li><a href="">Register</a></li>
             </ul>
-            <!-- <button>Register</button> -->
+            <button class="text-register border-2 border-register rounded-md px-4 py-2">Register</button>
         </nav>
         <!-- Nav end -->
+        <!-- hero section start  -->
+        <section>
+            <!-- <div class="carousel w-full">
+                <h1 class="text-4xl">Get Started Digital Learning</h1>
+                <div id="slide1" class="carousel-item relative w-full">
+                  <img src="./images/cover/cover-1.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle text-white text-5xl">❮</a> 
+                    <a href="#slide2" class="btn btn-circle text-white text-5xl">❯</a>
+                  </div>
+                </div> 
+                <div id="slide2" class="carousel-item relative w-full">
+                  <img src="./images/cover/cover-2.jpg" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a> 
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                  </div>
+                </div> 
+                <div id="slide3" class="carousel-item relative w-full">
+                  <img src="./images/cover/cover-3.jpg" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a> 
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                  </div>
+                </div> 
+              </div> -->
+                
+              <!-- component -->
+                <!-- This is an example component -->
+                <div class="mx-auto">
+
+                    <div id="default-carousel" class="relative" data-carousel="static">
+                        <!-- Carousel wrapper -->
+                        <div class="overflow-hidden relative rounded-lg h-80 sm:h-64 xl:h-80 2xl:h-96">
+                        
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="./images/cover/cover-1.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="./images/cover/cover-2.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="./images/cover/cover-3.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                            </div>
+                        </div>
+                        <!-- Slider indicators -->
+                        <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                <span class="hidden">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                            <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                <span class="hidden">Next</span>
+                            </span>
+                        </button>
+                    </div>
+                    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+                </div>
+        </section>
+   
+        <!-- hero section end  -->
     </header>
-    <!-- Header start -->
+    <!-- Header end -->
+    <!-- Main start -->
+    <main>
+        <!-- course section start -->
+        <section class="container mx-auto space-y-4 mb-32">
+            <h1 class="text-5xl font-bold text-center">
+                Discover Our Popular
+                <br>
+                <span>Courses</span>
+            </h1>
+            <p class="text-textash text-center">It is a long established fact that a reader will be distracted by the readable
+                <br>
+                 content of a page when looking at its layout.
+            </p>
+            <div class="grid grid-cols-2 gap-6 px-3">
+                <div class="flex items-center gap-6">
+                    <div>
+                        <img src="./images/course/course-1.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-2xl">Fundamental Of UI/UX Design</h3>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card.</p>
+                        <h4 class="text-register font-semibold">Price : 20$</h4>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div>
+                        <img src="./images/course/course-2.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-2xl">Javascript Basic to advanced</h3>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card.</p>
+                        <h4 class="text-register font-semibold">Price : 20$</h4>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div>
+                        <img src="./images/course/course-3.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-2xl">Fullstack Web Development</h3>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card.</p>
+                        <h4 class="text-register font-semibold">Price : 20$</h4>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div>
+                        <img src="./images/course/course-4.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-2xl">Digital Marketing</h3>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card.</p>
+                        <h4 class="text-register font-semibold">Price : 20$</h4>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div>
+                        <img src="./images/course/course-5.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-2xl">Photography Basic Rules</h3>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card.</p>
+                        <h4 class="text-register font-semibold">Price : 20$</h4>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div>
+                        <img src="./images/course/course-6.png" alt="">
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-2xl">Motion Graphics</h3>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card.</p>
+                        <h4 class="text-register font-semibold">Price : 20$</h4>
+                    </div>
+                </div>
+            </div><br>
+            <button class="bg-register text-white px-7 py-4 font-semibold rounded-lg">See More Courses</button>
+        </section>
+        <!-- course section end -->
+        <!-- elearning section start  -->
+        <section class="bg-background container mx-auto mb-32">
+            <div class="flex items-center gap-7 justify-between">
+                <div>
+                    <img class="" src="./images/working.png" alt="">
+                </div>
+                <div class="p-12">
+                    <h1 class="text-4xl font-semibold">Explore The elearning Institute</h1>
+                    <p class="text-textash">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure. <br><br>
+
+                    Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined.</p>
+                    <div class="flex items-center gap-12 mb-4">
+                        <div>
+                            <h2 class="text-2xl font-bold">3.2K+</h2>
+                            <p class="text-textash">Online Course</p>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold">600+</h2>
+                            <p class="text-textash">Expert member</p>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold">1k+</h2>
+                            <p class="text-textash">Rating & Review</p>
+                        </div>
+                    </div>
+                    <button class="bg-register text-white px-8 py-3 font-semibold rounded-md">Read</button>
+                </div>
+            </div>
+        </section>
+        <!-- elearning section end  -->
+        <!-- join section start -->
+        <section class="bg-register container mx-auto mb-32 px-24 py-20 rounded-sm">
+           <div class="flex items-center justify-between">
+            <div>
+                <h1 class="text-white text-4xl font-bold">Ready to join?</h1><br>
+                <p class="text-white text-sm">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+            <button class="bg-white px-8 py-3 text-register font-semibold">Register Now</button>
+           </div>
+        </section>
+        <!-- join section start -->
+        <!-- Main end -->
+    </main>     
 </body>
 </html>
